@@ -125,124 +125,124 @@ $(document).ready(function() {
             }
         });
     }
-    // function getAreaCount() {
-    //     $.ajaxSetup({
-    //         dataType: "jsonp",
-    //         url: areaQuery,
-    //         beforeSend: function() {
-    //             // show gif here, eg:
-    //             $("#loading").show();
-    //         },
-    //         complete: function(data) {
-    //             // hide gif here, eg:
-    //             $("#loading").hide();
-    //         }
-    //     });
-    //     $.ajax({
-    //         success: function(data) {
-    //             var results = data.results.bindings;
-    //             var areaArray = [];
-    //             var areaArray2 = getUnemploymentCount();
-    //             console.log("Unemployment" + areaArray2);
-    //             for (var i in results) {
-    //                 item = [data.results.bindings[i].neighborhood.value, Number(data.results.bindings[i].count.value)];
-    //                 areaArray.push(item);
-    //             }
-    //             console.log("neighborhood " + areaArray);
-    //             google.setOnLoadCallback(initialize);
-    //             function initialize() {
-    //                 drawChart();
-    //                 drawChart2();
-    //             }
-    //             function drawChart() {
-    //                 //var data1 = google.visualization.arrayToDataTable(areaArray);
-    //                 var data = new google.visualization.DataTable();
-    //                 data.addColumn('string', 'Neighborhood');
-    //                 data.addColumn('number', 'Crime Count');
-    //                 data.addRows(areaArray);
-    //                 // var options = {'title':'Balitmore Crime Rate Chart based on the Neighborhood',
-    //                 //            'width':800,
-    //                 //            'height':1200};
-    //                 var options1 = {
-    //                     chart: {
-    //                         title: 'Balitmore Crime Rate Chart based on the Neighborhood',
-    //                         subtitle: '',
-    //                     },
-    //                     chartArea: {
-    //                         width: '70%'
-    //                     },
-    //                     bars: 'horizontal', // Required for Material Bar Charts.
-    //                     hAxis: {
-    //                         title: "Crime Count",
-    //                         minValue: 0,
-    //                     },
-    //                     vAxis: {
-    //                         title: "Neighborhood",
-    //                         textStyle: {
-    //                             fontSize: 12 // or the number you want
-    //                         }
-    //                     },
-    //                     height: 1200,
-    //                     colors: ['#d95f02']
-    //                 };
-    //                 var chart1 = new google.visualization.BarChart(document.getElementById('chart_div'));
-    //                 chart1.draw(data, google.charts.Bar.convertOptions(options1));
-    //             }
-    //             function drawChart2() {
-    //                 var data2 = google.visualization.arrayToDataTable(areaArray2);
-    //                 var options2 = {
-    //                     chart: {
-    //                         title: 'Balitmore Unemployment Rate Chart based on neighborhood',
-    //                         subtitle: '',
-    //                     },
-    //                     chartArea: {
-    //                         width: '70%'
-    //                     },
-    //                     bars: 'horizontal', // Required for Material Bar Charts.
-    //                     hAxis: {
-    //                         title: "Unemployment Rate",
-    //                         minValue: 0
-    //                     },
-    //                     vAxis: {
-    //                         title: "Neighborhood",
-    //                         format:'#%'
-    //                     },
-    //                     height: 1200,
-    //                     colors: ['#b0120a']
-    //                 };
-    //                 var chart2 = new google.charts.Bar(document.getElementById('chart_div2'));
-    //                 chart2.draw(data2, google.charts.Bar.convertOptions(options2));
-    //             }
-    //         }
-    //     });
-    //     //
-    // }
-    // getAreaCount();
-    // function getUnemploymentCount() {
-    //     var areaArray = [
-    //         ["Neighborhood", "Unemployment"]
-    //     ];
-    //     $.ajaxSetup({
-    //         dataType: "jsonp",
-    //         url: unemploymentQuery,
-    //         beforeSend: function() {
-    //             // show gif here, eg:
-    //             $("#loading").show();
-    //         },
-    //         complete: function(data) {
-    //             // hide gif here, eg:
-    //             $("#loading").hide();
-    //         }
-    //     });
-    //     $.ajax({
-    //         success: function(data) {
-    //             var results = data.results.bindings;
-    //             for (var i in results) {
-    //                 item = [data.results.bindings[i].neighborhood.value, data.results.bindings[i].unemp_rate.value];
-    //                 areaArray.push(item);
-    //             }
-    //         }
-    //     });
-    //     return areaArray;
-    // }
+    function getAreaCount() {
+        $.ajaxSetup({
+            dataType: "jsonp",
+            url: areaQuery,
+            beforeSend: function() {
+                // show gif here, eg:
+                $("#loading").show();
+            },
+            complete: function(data) {
+                // hide gif here, eg:
+                $("#loading").hide();
+            }
+        });
+        $.ajax({
+            success: function(data) {
+                var results = data.results.bindings;
+                var areaArray = [];
+                var areaArray2 = getUnemploymentCount();
+                console.log("Unemployment" + areaArray2);
+                for (var i in results) {
+                    item = [data.results.bindings[i].neighborhood.value, Number(data.results.bindings[i].count.value)];
+                    areaArray.push(item);
+                }
+                console.log("neighborhood " + areaArray);
+                google.setOnLoadCallback(initialize);
+                function initialize() {
+                    drawChart();
+                    drawChart2();
+                }
+                function drawChart() {
+                    //var data1 = google.visualization.arrayToDataTable(areaArray);
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Neighborhood');
+                    data.addColumn('number', 'Crime Count');
+                    data.addRows(areaArray);
+                    // var options = {'title':'Balitmore Crime Rate Chart based on the Neighborhood',
+                    //            'width':800,
+                    //            'height':1200};
+                    var options1 = {
+                        chart: {
+                            title: 'Balitmore Crime Rate Chart based on the Neighborhood',
+                            subtitle: '',
+                        },
+                        chartArea: {
+                            width: '70%'
+                        },
+                        bars: 'horizontal', // Required for Material Bar Charts.
+                        hAxis: {
+                            title: "Crime Count",
+                            minValue: 0,
+                        },
+                        vAxis: {
+                            title: "Neighborhood",
+                            textStyle: {
+                                fontSize: 12 // or the number you want
+                            }
+                        },
+                        height: 1200,
+                        colors: ['#d95f02']
+                    };
+                    var chart1 = new google.visualization.BarChart(document.getElementById('chart_div'));
+                    chart1.draw(data, google.charts.Bar.convertOptions(options1));
+                }
+                function drawChart2() {
+                    var data2 = google.visualization.arrayToDataTable(areaArray2);
+                    var options2 = {
+                        chart: {
+                            title: 'Balitmore Unemployment Rate Chart based on neighborhood',
+                            subtitle: '',
+                        },
+                        chartArea: {
+                            width: '70%'
+                        },
+                        bars: 'horizontal', // Required for Material Bar Charts.
+                        hAxis: {
+                            title: "Unemployment Rate",
+                            minValue: 0
+                        },
+                        vAxis: {
+                            title: "Neighborhood",
+                            format:'#%'
+                        },
+                        height: 1200,
+                        colors: ['#b0120a']
+                    };
+                    var chart2 = new google.charts.Bar(document.getElementById('chart_div2'));
+                    chart2.draw(data2, google.charts.Bar.convertOptions(options2));
+                }
+            }
+        });
+        //
+    }
+    getAreaCount();
+    function getUnemploymentCount() {
+        var areaArray = [
+            ["Neighborhood", "Unemployment"]
+        ];
+        $.ajaxSetup({
+            dataType: "jsonp",
+            url: unemploymentQuery,
+            beforeSend: function() {
+                // show gif here, eg:
+                $("#loading").show();
+            },
+            complete: function(data) {
+                // hide gif here, eg:
+                $("#loading").hide();
+            }
+        });
+        $.ajax({
+            success: function(data) {
+                var results = data.results.bindings;
+                for (var i in results) {
+                    item = [data.results.bindings[i].neighborhood.value, data.results.bindings[i].unemp_rate.value];
+                    areaArray.push(item);
+                }
+            }
+        });
+        return areaArray;
+    }
 });
