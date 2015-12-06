@@ -1,0 +1,569 @@
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("font-awesome.min.css");
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+@font-face {
+    font-family: enriqueta;
+    src: url(../font/Enriqueta-Regular.otf);
+}
+.row {
+    padding-top: 10px;
+}
+
+.home-content {
+    height: 600px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    color: #000;
+    text-align: center;
+}
+
+.intro-msg {
+    position: relative;
+    padding-top: 0%;
+    padding-bottom: 20%;
+    color: #323232;
+}
+
+.intro-msg >h1 {
+    margin-top: -50px;
+    text-shadow: 2px 1px 2px #000;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.intro-msg >h3 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    color: black;
+}
+
+hr.intro-divider {
+    border: 1px outset rgba(255, 255, 255, 0.2);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    width: 100%;
+}
+
+.about-content {
+    padding-bottom: 50px;
+    
+    background-size: cover;
+    height: 900px;
+    
+}
+.map-content {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 80px;
+    
+    
+    height: 884px;
+    
+}
+.link {
+    color: #333;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: none;
+}
+
+.portfolio-content {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    background-size: cover;
+    height: 900px;
+    
+}
+
+.contact-content {
+    margin-top: 10px;
+    background-size: cover;
+    height: 884px;
+    color: #FFF;
+}
+
+.profile_img {
+    width: 250px;
+}
+
+.social-list-banner {
+    float: right;
+    margin-top: 25px;
+}
+
+ul.social-list-banner > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+h2.portfolio-heading {
+    text-shadow: 2px 1px 2px #000;
+    margin-top: 70px;
+    font-size: 2.5em;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.portfolio-box {
+    border: 1px outset rgba(255, 255, 255, 0.6);
+}
+
+.portfolio-link {
+    z-index: 10;
+}
+
+.portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+.portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.portfolio-item .portfolio-link .portfolio-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(254, 209, 54, .9);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#portfolios {
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.portfolio-item .portfolio-link .portfolio-hover:hover {
+    opacity: 1;
+}
+
+.portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+    margin-top: -12px;
+}
+
+.portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3, .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+    margin: 0;
+}
+
+.portfolio-item .portfolio-caption {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    background-color: #92BB61;
+    color: #fff;
+}
+
+.portfolio-item .portfolio-caption h4 {
+    margin: 0;
+    text-transform: none;
+}
+
+.portfolio-item .portfolio-caption p {
+    margin: 0;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+    font-style: italic;
+}
+
+footer {
+    padding: 50px 0;
+    background: rgba(192, 192, 192, 0.9);
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 320px) {
+
+  .portfolio-item .portfolio-caption p{
+        font-size: 8px;
+    }
+    .portfolio-hover-content{
+        font-size: 10px;
+    }
+  .intro-msg >h1 {
+    margin-top: -50px;
+    text-shadow: 2px 1px 2px #000;
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.intro-msg >h3 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    color: black;
+}
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {
+  .portfolio-item .portfolio-caption p{
+        font-size: 10px;
+    }
+    .portfolio-hover-content{
+        font-size: 10px;
+    }
+  .intro-msg >h1 {
+    margin-top: -50px;
+    text-shadow: 2px 1px 2px #000;
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.intro-msg >h3 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    color: black;
+}
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+  .portfolio-item .portfolio-caption p{
+        font-size: 13px;
+    }
+  .intro-msg >h1 {
+    margin-top: -50px;
+    text-shadow: 2px 1px 2px #000;
+    font-size: 3.5em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.intro-msg >h3 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    color: black;
+}
+
+.main.style3 {
+        text-align: center;
+        padding: 3em 10px 0em 10px;
+    }
+    /* Header */
+    #header {
+        height: 2.5em;
+        line-height: 2.5em;
+    }
+    body {
+        padding-top: 2.5em;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {
+  .portfolio-item .portfolio-caption p{
+        font-size: 16px;
+    }
+  .intro-msg >h1 {
+    margin-top: -50px;
+    text-shadow: 2px 1px 2px #000;
+    font-size: 4em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.intro-msg >h3 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    color: black;
+}
+}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {
+  .portfolio-caption  p{
+        font-size: 18px;
+    }
+  .intro-msg >h1 {
+    margin-top: -50px;
+    text-shadow: 2px 1px 2px #000;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.intro-msg >h3 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    color: black;
+}
+}
+
+/* Basic */
+
+@-ms-viewport {
+    width: device-width;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #fff;
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 18pt;
+    line-height: 1.75em;
+    color: #39454b;
+    letter-spacing: 0.5px;
+}
+
+
+
+input, textarea, select {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 18pt;
+    line-height: 1.75em;
+    color: #39454b;
+    letter-spacing: 0.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    color: inherit;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2.25em;
+    letter-spacing: -2px;
+    line-height: 1.25em;
+}
+
+strong, b {
+    font-weight: 900;
+    color: inherit;
+}
+
+em, i {
+    font-style: italic;
+}
+
+a {
+    -moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+    color: #98c593;
+}
+
+header {
+    margin-bottom: 1em;
+}
+
+header p {
+    display: block;
+    margin: 1em 0 0 0;
+    padding: 0 0 0.5em 0;
+}
+
+footer {
+    margin-top: 2em;
+}
+/* List */
+
+ul.default {
+    list-style: disc;
+    padding-left: 1em;
+}
+
+ul.default li {
+    padding-left: 0.5em;
+}
+
+ul.icons {
+    cursor: default;
+}
+
+ul.icons li {
+    display: inline-block;
+}
+
+ul.icons a {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    border: 0;
+}
+
+ul.menu {
+    cursor: default;
+}
+
+ul.menu li {
+    display: inline-block;
+    line-height: 1em;
+    border-left: solid 1px rgba(145, 146, 147, 0.25);
+    padding: 0 0 0 0.5em;
+    margin: 0 0 0 0.5em;
+}
+
+ul.menu li:first-child {
+    border-left: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+ul.actions {
+    cursor: default;
+}
+
+ul.actions li {
+    display: inline-block;
+    margin: 0 0 0 0.5em;
+}
+
+ul.actions li:first-child {
+    margin-left: 0;
+}
+
+ol.default {
+    list-style: decimal;
+    padding-left: 1.25em;
+}
+
+ol.default li {
+    padding-left: 0.25em;
+}
+
+body {
+    text-decoration: none;
+}
+
+#header {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    height: 3em;
+    line-height: 3em;
+    box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+}
+
+
+body {
+    padding-top: 3em;
+}
+
+#logo {
+    position: absolute;
+    left: 1em;
+    top: 0;
+    height: 3em;
+    line-height: 3em;
+    letter-spacing: -1px;
+}
+
+#logo a {
+    font-size: 1.25em;
+}
+body.is-touch  .nav-next, body.is-touch .nav-previous, body.is-touch  {
+    opacity: 1.0 !important;
+}
+#nav {
+    position: absolute;
+    right: 0.5em;
+    top: 0;
+    height: 3em;
+    line-height: 3em;
+}
+
+#nav ul {
+    margin: 0;
+}
+
+#nav ul li {
+    display: inline-block;
+    margin-left: 0.5em;
+    font-size: 0.9em;
+}
+
+#nav ul li a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    height: 3em;
+    line-height: 3em;
+    padding: 0 0.5em 0 0.5em;
+    outline: 0;
+}
+
+
+/* Intro */
+
+#intro {
+    background-size: 256px 256px, cover;
+    background-attachment: fixed, fixed;
+    background-position: top left, bottom center;
+    background-repeat: repeat, no-repeat;
+}
+.main {
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.main.style3 {
+    text-align: center;
+    
+}
+
+.main.style3 .content > header {
+    margin-bottom: 2em;
+}
+
+.main.style3.primary {
+    background: #fff;
+}
+
+.main.style3.secondary {
+    background: #f5f6f7;
+}
