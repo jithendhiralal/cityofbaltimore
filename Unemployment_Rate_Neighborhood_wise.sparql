@@ -1,0 +1,20 @@
+Query for Unemployment rate neighborhood wise :
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX ds: <http://data.baltimorecity.gov/resource/_8hgm-7t56/> 
+PREFIX ts: <http://data.baltimorecity.gov/resource/_59fg-ary5/> 
+PREFIX dsbase: <http://data.baltimorecity.gov/resource/> 
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> 
+SELECT ?neighborhood ?unemp_rate ?code ?desc ?lat ?lang 
+WHERE { 
+?element rdf:type dsbase:_8hgm-7t56; 
+ds:neighborhood "Allendale"; -> give the neighborhood here, for example “Allendale” 
+ds:unempr13 ?unemp_rate.
+?element1 rdf:type dsbase:_59fg-ary5; 
+ts:neighborhood ?neighborhood; 
+filter contains(?neighborhood,"Allendale") -> give the neighborhood here 
+?element1 ts:crimecode ?code; 
+ts:description ?desc; 
+geo:lat ?lat; 
+geo:long ?lang. 
+}

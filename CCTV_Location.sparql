@@ -1,0 +1,16 @@
+Query for CCTV location : 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX ds: <http://data.baltimorecity.gov/resource/_8hgm-7t56/> 
+PREFIX ts: <http://data.baltimorecity.gov/resource/_59fg-ary5/> 
+PREFIX cs: <http://data.baltimorecity.gov/resource/hdyb-27ak/> 
+PREFIX dsbase: <http://data.baltimorecity.gov/resource/> 
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> 
+SELECT ?name ?lat ?long 
+WHERE {
+?element rdf:type dsbase:hdyb-27ak; 
+cs:name ?name; 
+cs:location_1 ?blank. 
+?blank geo:lat ?lat;
+geo:long ?long. 
+}
